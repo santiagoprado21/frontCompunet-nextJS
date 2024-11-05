@@ -1,4 +1,3 @@
-export * from './nav-bar/NavBar'; 
-
-// Client Components
-export {ActiveLink} from './active-link/ActiveLink';
+export * from "./ui/top-menu/TopMenu"
+export * from "./ui/not-found/PageNotFound"
+export * from "./ui/title/Title"
