@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation"
 
 export default function Products() {
   return (
@@ -10,8 +9,8 @@ export default function Products() {
               Summer styles are finally here
             </h1>
             <p className="mt-4 text-xl text-gray-500">
-              This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
-              if you live or die.
+              This year, our new summer collection will shelter you from the
+              harsh elements of a world that doesn't care if you live or die.
             </p>
           </div>
           <div>
@@ -93,53 +92,8 @@ export default function Products() {
         </div>
       </div>
     </div>
-  )
+
+    
+  );
 }
 
-// 'use client'
-// import React from 'react';
-// import Link from 'next/link';
-
-// function Home() {
-//   return (
-//     <div className="flex flex-col items-center justify-center min-h-screen py-24">
-//       <div className="flex flex-col items-center justify-center max-w-7xl mx-auto">
-//         <h1 className="text-7xl font-bold mb-10">ONLINE STORE</h1>
-//         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-//           <Link href="/">
-//             <div className="flex flex-col items-center">
-//               <img src="/DESTINOS.png" alt="Dashboard" className="w-full h-auto mb-4" />
-//               <p className="text-center">Dashboard</p>
-//             </div>
-//           </Link>
-//           <Link href="/auth/login">
-//             <div className="flex flex-col items-center">
-//               <img src="/PLANES.png" alt="Planes" className="w-full h-auto mb-4" />
-//               <p className="text-center">Planes</p>
-//             </div>
-//           </Link>
-//           <Link href="/auth/login">
-//             <div className="flex flex-col items-center">
-//               <img src="/CLIENTES.png" alt="Clientes" className="w-full h-auto mb-4" />
-//               <p className="text-center">Clientes</p>
-//             </div>
-//           </Link>
-//           <Link href="/auth/login">
-//             <div className="flex flex-col items-center">
-//               <img src="/SERVICIOS.png" alt="Servicios" className="w-full h-auto mb-4" />
-//               <p className="text-center">Servicios</p>
-//             </div>
-//           </Link>
-//           <Link href="/auth/login">
-//             <div className="flex flex-col items-center">
-//               <img src="/RESERVAS.png" alt="Reservas" className="w-full h-auto mb-4" />
-//               <p className="text-center">Reservas</p>
-//             </div>
-//           </Link>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Home;
