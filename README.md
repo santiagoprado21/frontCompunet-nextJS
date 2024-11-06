@@ -38,9 +38,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Informe
 
+## Descripcion
 La aplicación "OnlineStore" es una plataforma de comercio electrónico diseñada para ofrecer una experiencia de compra en línea intuitiva y segura. Su principal objetivo es facilitar la adquisición de productos por parte de los usuarios, brindando un catálogo variado, un proceso de compra sencillo y opciones de pago confiables.
 
-2. Funcionalidades Implementadas
+## Funcionalidades Implementadas
 La aplicación cuenta con un conjunto de funcionalidades clave que permiten una experiencia de usuario completa:
 
 - Registro y autenticación de usuarios: Los usuarios pueden crear una cuenta y autenticarse mediante un sistema basado en tokens JWT, lo que garantiza la seguridad y privacidad de sus datos.
@@ -49,11 +50,15 @@ La aplicación cuenta con un conjunto de funcionalidades clave que permiten una 
 - Proceso de compra y pago: La aplicación ofrece un proceso de compra seguro y eficiente, integrando pasarelas de pago confiables.
 - Gestión de pedidos: Los usuarios pueden realizar un seguimiento de sus pedidos, desde la confirmación hasta la entrega.
 - Perfil de usuario: Los usuarios pueden gestionar su información personal, historial de pedidos y preferencias.
-3. Implementación de la Autenticación
-Utilización de tokens JWT
+
+## Implementación de la Autenticación
+### Autenticación
+La API utiliza tokens JWT para autenticar las solicitudes. El token se incluye en el encabezado Authorization de cada solicitud.
+
+### Utilización de tokens JWT
 Para implementar la autenticación en "MiTiendaOnline", se ha optado por la utilización de JSON Web Tokens (JWT). Los JWT son un estándar abierto para la transmisión segura de información entre partes como un método para implementar autenticación.
 
-Flujo de autenticación
+### Flujo de autenticación
 El flujo de autenticación en la aplicación sigue los siguientes pasos:
 
 - Registro: El usuario proporciona sus datos personales (nombre, correo electrónico, contraseña) para crear una nueva cuenta. La contraseña se almacena en la base de datos de forma segura mediante un algoritmo de hash (por ejemplo, bcrypt).
@@ -65,8 +70,7 @@ El flujo de autenticación en la aplicación sigue los siguientes pasos:
 * Seguridad: El token debe ser almacenado de forma segura para evitar que sea robado o manipulado. Se recomienda utilizar el almacenamiento HTTP-only para las cookies, lo que impide que el JavaScript del cliente pueda acceder a ellas.
 * Caducidad: El token debe tener una vida útil limitada para minimizar el riesgo de que sea utilizado si es comprometido.
 
-
-JWT:
+### JWT:
 - Seguridad: Los JWT son difíciles de falsificar debido a la firma digital.
 - Stateless: La autenticación basada en JWT no requiere mantener una sesión en el servidor, lo que simplifica la escalabilidad.
 - Portabilidad: Los JWT son estándares abiertos y pueden ser utilizados en diferentes plataformas y lenguajes de programación.
