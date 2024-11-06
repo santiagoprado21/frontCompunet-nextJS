@@ -1,6 +1,7 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { redirect } from 'next/navigation';
+import AuthContext from '@/app/middleware/auth.config';
 
 interface LoginData {
   email: string;
@@ -12,6 +13,7 @@ const LoginPage: React.FC = () => {
     email: '',
     password: '',
   });
+  const { login } = useContext(AuthContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
@@ -21,9 +23,16 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // try {
+    //   await login(loginData);
+    //   redirect('/'); // 
+    // } catch (error) {
+    //   // Handle error
+    // }
+    console.log("Here");
 
     try {
-      const response = await fetch('/api/login', { //TODO change by api backend
+      const response = await fetch('https://login:3450', { //TODO 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,10 +46,12 @@ const LoginPage: React.FC = () => {
         redirect('/'); 
       } else {
         alert('Invalid credentials'); //401
+        console.log("401");
       }
     } catch (error) {
       console.error('Login error:', error);
       alert('Login failed. Please try again.');
+      console.log("ERROR");
     }
   };
 
@@ -112,7 +123,7 @@ const LoginPage: React.FC = () => {
 
       <p className="mt-10 text-center text-sm/6 text-gray-500">
         Not a member?{' '}
-        <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
+        <a href="/auth/create-account" className="font-semibold text-indigo-600 hover:text-indigo-500">
           Create account
         </a>
       </p>

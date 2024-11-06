@@ -1,26 +1,14 @@
-"use server"
-import { GetServerSideProps } from "next";
-import { isValidElement } from "react";
+"use client"
+import { useEffect, useContext } from 'react';
+import AuthContext from '@/app/middleware/auth.config';
+import { redirect } from 'next/navigation';
 
-const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const token = req.cookies.token;
+export default function ProtectedRoute({ children }) {
+  const { user } = useContext(AuthContext);
 
-  if (!token || !isValidElement(token)) { //should be valid token
-    return {
-      redirect: {
-        destination: '/login',
-        permanent: false,
-      },
-    };
-  }
+  useEffect(() => {
+    if (!user) redirect('/auth/login');
+  }, [user]);
 
-  return {
-    props: {},
-  };
-};
-
-export default async function AdminPage() {
-  return(
-    <div>Admin Page</div> //Is not working
-  )
+  return user ? children : null;
 }

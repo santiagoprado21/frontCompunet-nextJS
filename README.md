@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+# Informe
+
+1. Introducción
+
+Breve descripción de la aplicación "MiTiendaOnline"
+Objetivo: Facilitar la compra de productos en línea.
+
+2. Funcionalidades Implementadas
+
+Registro y autenticación de usuarios
+Navegación por categorías de productos
+Agregar productos al carrito
+Proceso de compra y pago
+Gestión de pedidos
+Perfil de usuario
+
+3. Implementación de la Autenticación
+
+Utilización de tokens JWT para autenticación
+Flujo de autenticación: Registro, inicio de sesión, validación de token
+Almacenamiento de tokens en el navegador

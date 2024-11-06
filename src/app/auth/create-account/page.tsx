@@ -43,6 +43,8 @@ function CreateUserPage() {
   };
 
   return (
+  <div className="container mx-auto px-4 py-8">
+   <div className="bg-gray-100 p-6 rounded-lg mb-4">
     <div className="space-y-12">
     <form onSubmit={handleCreateUser} className="flex flex-col space-y-6">
       <div className="flex flex-col space-y-4">
@@ -176,6 +178,10 @@ function CreateUserPage() {
 
     </form>
     </div>
+    </div>
+    </div>
+    
+
   )
 }
 
